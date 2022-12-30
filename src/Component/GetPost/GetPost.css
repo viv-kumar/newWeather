@@ -1,0 +1,19 @@
+#post-box{
+    width: 80%;
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    /* border: 2px solid red; */
+
+}
+#post-box>div{
+    border: 2px solid black;
+    padding: 15px;
+    /* font-size: 40px; */
+}
+h6{
+    display: inline;
+    margin-left: 50px;
+    font-size: 25px;
+}
