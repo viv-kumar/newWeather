@@ -8,9 +8,9 @@ function GetData(props){
    const [state,setState]=React.useState([]);
    
    useEffect(() => {
-     fetch(`http://ipinfo.io/${props.info}?token=40768a684f0f55`)
-       .then((res) => res.json())
-       .then((data) => setState(data));
+     fetch(`https://ipinfo.io/${props.info}?token=40768a684f0f55`)
+       .then((res) => { return res.json()})
+       .then((data) => {setState(data)});
    //   console.log(state);
    }, [])
   
@@ -42,13 +42,13 @@ function GetData(props){
         </div>
         <div id="last-div">
           <h5>Time Zone:{state.timezone}</h5>
-          <h5>
-            Date And Time:{date}
-          </h5>
+          <h5>Date And Time:{date}</h5>
           <h5>Pincode:{state.postal}</h5>
         </div>
         <div>
-          <GetPost info={state.postal}/>
+          {console.log(state.postal)}
+          <GetPost pin={state.postal} />
+          {console.log(state.postal)}
         </div>
       </div>
     );

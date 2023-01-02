@@ -17,3 +17,17 @@ h6{
     margin-left: 50px;
     font-size: 25px;
 }
+#filter{
+    margin-left: 50px;
+    width: 80%;
+    margin-bottom: 30px;
+    padding: 8px;
+}
+#click{
+     margin-bottom: 30px;
+    padding: 8px;
+}
+#post{
+    padding: 8px;
+    margin-left: 10px;
+}

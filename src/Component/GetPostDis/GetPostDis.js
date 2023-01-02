@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 function GetPostDis(props){
-    // const[arr,setArr]=React.useState([]);
-    // setArr(props.info)
-// console.log(props.info);
+    let [state,setState]=React.useState("");
+    useEffect(()=>{
+      fetch("https://api64.ipify.org/?format=json").then((res)=>{
+        // console.log(res.json());
+        return   res.json();
+      }).then((data)=>{
+        console.log(data);
+        setState(data.ip)
+        console.log(data);
+      })
+    })
 return(
       <div>
-        <p>props</p>
+        <p>{state}</p>
       </div>
 )
 }

@@ -5,11 +5,20 @@ function GetIp(){
     const [state,setState]=React.useState("");
     const [check,setCheck]=React.useState(false);
      useEffect(()=>{
-        fetch("https://api.ipify.org?format=json").then((res)=>res.json()).then((data)=>(setState(data.ip)))
-     })
+        fetch("https://api.ipify.org/?format=json&callback=getIP")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            setState(data.ip);
+          });}
+          )
+     
+     
      function getfun(){
         setCheck(true)
      }
+    console.log(state);
      
     return (
       <div>
